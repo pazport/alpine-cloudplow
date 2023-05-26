@@ -41,6 +41,9 @@ RUN apk -U add --no-cache \
     tzdata && \
     python3 -m pip install --no-cache-dir --upgrade pip wheel
 
+# update
+RUN apk update && apk upgrade
+
 # add s6-overlay scripts and config
 ADD root/ /
 
